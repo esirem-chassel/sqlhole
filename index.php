@@ -128,7 +128,7 @@ if ($auth) {
     <?php } else { ?>
         <p>
             Connecté en tant que
-            <?php echo $user['email']; ?>
+            <?php echo $usr['email']; ?>
             -
             <a href="index.php?action=logout">Déconnexion</a>
         </p>
