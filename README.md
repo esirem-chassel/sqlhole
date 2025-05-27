@@ -13,7 +13,12 @@ Activez ensuite php-fpm (service php<version>-fpm start), nginx (service nginx r
 
 ## Téléchargement et installation de l'applicatif
 
+> [!Info]
+> L'installation fonctionne sans différences sur Windows (WAMP/XAMPP) et Linux/Unix (nginx).
+
 Sur votre système, effectuez un git clone de l'application dans le répertoire web.
 Créez, dans votre MySQL, une base nommée `uas`. Vérifiez les droits et modifiez `db.php` au besoin.
+
+Lancez, en ligne de commande, le init.php : `php init.php`.
 
 Accédez ensuite à votre dossier depuis votre web local.
