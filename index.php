@@ -11,7 +11,7 @@ $auth = !empty($_SESSION['id']);
 $usr = null;
 if ($auth) {
     $cu = $_SESSION['email']; // $_SESSION est stocké coté serveur, pas client
-    $usr = $sql->query("select * from `users` where `email`='$cu'");
+    $usr = $sql->query("select * from `users` where `email`='$cu'")->fetch(PDO::FETCH_ASSOC);
 } else {
     if (!empty($_REQUEST['subscribe'])) {
         $email = $_REQUEST['email'];
