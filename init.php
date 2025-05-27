@@ -5,10 +5,6 @@ require_once 'db.php';
 $queries = [];
 
 $queries[] = <<<'EOT'
-create database if not exists `uas`;
-EOT;
-
-$queries[] = <<<'EOT'
 create table `users` (`id` int not null primary key auto_increment,
 `email` varchar(200) not null unique,
 `pwd` varchar(200) not null,
@@ -41,7 +37,7 @@ INSERT INTO users (email, pwd, birthdate) VALUES
 EOT;
 
 $queries[] = <<<'EOT'
-INSERT INTO addresses (user_id, content) VALUES
+INSERT INTO addresses (user, content) VALUES
 (1, '42 Rue des Lilas, Paris'),
 (2, '8 Boulevard Haussmann, Paris'),
 (3, '17 Avenue de la République, Lyon'),
